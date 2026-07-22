@@ -1,6 +1,6 @@
 # 日语动词活用表
 
-一个用于展示日语动词活用规则的静态 HTML 页面，收录在 [index.html](https://condorheroblog.github.io/japanese-verb-conjugation/blob/main/index.html) 中。
+一个用于展示日语动词活用规则的静态 HTML 页面，收录在 [index.html](https://github.com/condorheroblog/japanese-verb-conjugation/blob/main/index.html) 中。
 
 > 在线访问：[https://condorheroblog.github.io/japanese-verb-conjugation](https://condorheroblog.github.io/japanese-verb-conjugation)
 

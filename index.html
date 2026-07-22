@@ -732,34 +732,21 @@
       if (!window.snapdom) { console.warn('snapDOM 未加载'); return; }
 
       // 只截取每个 .table-card 内的 table 标签
-      const sections = document.querySelectorAll('section.table-card table');
+      const tables = document.querySelectorAll('section.table-card table');
       const fileNames = [
         'japanese-verb-conjugation-table-1.png',
         'japanese-verb-conjugation-table-2.png',
         'japanese-verb-conjugation-table-3.png'
       ];
-
-      function triggerDownload(blob, filename) {
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
-      }
-
-      async function snap(section, filename, btn) {
-        if (!section || !window.snapdom) return;
+      async function snap(table, filename, btn) {
+        if (!table || !window.snapdom) return;
         const original = btn.disabled;
         btn.disabled = true;
         const prevText = btn.getAttribute('aria-label');
         btn.setAttribute('aria-label', '正在生成图片…');
         try {
-          // 把整个 table-card（包含标题与按钮）渲染为图片并直接下载
-          const result = await window.snapdom(section, { scale: 2 });
-          await result.download({ format: 'jpg', filename });
+          const result = await window.snapdom(table, { scale: 2 });
+          await result.download({ format: 'png', filename });
         } catch (err) {
           console.error('截图失败：', err);
           alert('截图失败，请重试。详见控制台。');
@@ -772,9 +759,9 @@
       document.querySelectorAll('.shot-btn').forEach((btn) => {
         btn.addEventListener('click', () => {
           const idx = parseInt(btn.dataset.shot, 10) - 1;
-          const section = sections[idx];
+          const table = tables[idx];
           const filename = fileNames[idx] || `table-${idx + 1}.png`;
-          snap(section, filename, btn);
+          snap(table, filename, btn);
         });
       });
     })();
