@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>日语动词活用表</title>
+<link rel="icon" type="image/svg+xml" href="public/logo.svg" />
+
+<!-- 通用 SEO -->
+<meta name="description" content="日语动词活用表：涵盖一类（五段）、二类（一段）、三类（サ変 / カ変）及特殊变化的全部 12 种活用形，含词尾变化、音便规则与活用框架图。来源：圆圆的日语教室。" />
+<meta name="keywords" content="日语动词,活用表,五段动词,一段动词,サ変,カ変,て形,た形,ない形,ます形,可能形,使役,被动,音便,促音便,撥音便,イ音便" />
+<meta name="author" content="圆圆的日语教室" />
+
+<!-- Open Graph（通用 / Facebook / LinkedIn 等） -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="日语动词活用表" />
+<meta property="og:title" content="日语动词活用表" />
+<meta property="og:description" content="涵盖五段、一段、サ変、カ変 及特殊变化的日语动词活用全表，含词尾变化与音便规则。来源：圆圆的日语教室。" />
+<meta property="og:url" content="https://condorheroblog.github.io/japanese-verb-conjugation/" />
+<meta property="og:image" content="https://condorheroblog.github.io/japanese-verb-conjugation/public/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="日语动词活用表 — 圆圆的日语教室" />
+<meta property="og:locale" content="zh_CN" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="日语动词活用表" />
+<meta name="twitter:description" content="涵盖五段、一段、サ変、カ変 及特殊变化的日语动词活用全表。来源：圆圆的日语教室。" />
+<meta name="twitter:image" content="https://condorheroblog.github.io/japanese-verb-conjugation/public/og-image.jpg" />
+<meta name="twitter:image:alt" content="日语动词活用表 — 圆圆的日语教室" />
+<style>
+  :root {
+    --orange-deep: #e97a30;   /* 橙色深 */
+    --orange-mid: #fac7a6;    /* 橙色中 */
+    --orange-light: #fde0c8;  /* 橙色浅 */
+    --orange-bg: #fce8d6;     /* 橙色背景 */
+    --green-band: #6cc4a4;    /* 绿色带 */
+    --red-band: #d96b6b;      /* 红色带 */
+    --blue-band: #6ba9d9;     /* 蓝色带 */
+    --text-dark: #5a3018;     /* 深色文本 */
+    --text-body: #6b4423;     /* 主文本 */
+    --border-light: #f3c9a4;  /* 表格边框 */
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #fdf6ec;
+    color: var(--text-body);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  }
+  body {
+    padding: 24px 16px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  /* === 通用 === */
+  .title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin: 0;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #9b6a45;
+    margin-top: 4px;
+  }
+  .table-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 4px 18px rgba(180, 100, 50, 0.12);
+    width: 100%;
+    max-width: 1100px;
+    overflow-x: auto;
+  }
+  /* === 页眉：Logo + 标题 === */
+  .page-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 1100px;
+    width: 100%;
+  }
+  .page-header .logo {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+  }
+  .page-header .title { text-align: left; }
+  .page-header .subtitle { text-align: left; margin-top: 4px; }
+  /* === 页脚：版权声明 === */
+  .copyright {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #9b6a45;
+    text-align: center;
+    max-width: 1100px;
+    width: 100%;
+    line-height: 1.6;
+  }
+  .copyright a {
+    color: var(--orange-deep);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--orange-mid);
+  }
+  .copyright a:hover { color: var(--text-dark); border-bottom-color: var(--orange-deep); }
+  .section-title {
+    margin: 0 0 10px;
+    color: var(--text-dark);
+    font-size: 16px;
+  }
+  .section-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 0 0 10px;
+  }
+  .section-title-wrap .section-title { margin: 0; }
+  .shot-btn {
+    appearance: none;
+    border: 1px solid var(--border-light);
+    background: #fff;
+    color: var(--text-dark);
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background .15s, border-color .15s, transform .1s;
+  }
+  .shot-btn:hover { background: var(--orange-bg); border-color: var(--orange-mid); }
+  .shot-btn:active { transform: scale(0.94); }
+  .shot-btn[disabled] { opacity: .5; cursor: wait; }
+  .shot-btn svg { width: 16px; height: 16px; display: block; }
+
+  /* === 图 1：五段动词活用形 === */
+  table.verb {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 13px;
+    table-layout: fixed;
+  }
+  table.verb th,
+  table.verb td {
+    border: 1px solid var(--border-light);
+    padding: 6px;
+    text-align: center;
+    vertical-align: middle;
+    background: #fff7ee;
+    word-break: break-word;
+  }
+  table.verb th {
+    background: var(--orange-deep);
+    color: #fff;
+    font-weight: 700;
+  }
+  .section-bg { background-color: var(--orange-bg); }
+  table.verb .section-bg td { background-color: transparent; }
+  .verb-cell {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  .label-green { background: var(--green-band) !important; }
+  .label-red { background: var(--red-band) !important; }
+  .label-blue { background: var(--blue-band) !important; }
+  .empty { background: #fdf3e6; }
+  .other-list {
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 6px;
+  }
+  .none-text { color: #c28560; }
+
+  /* === 图 2 & 图 3：活用规则 === */
+  table.rules {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 13px;
+    table-layout: fixed;
+  }
+  table.rules th,
+  table.rules td {
+    border: 1px solid var(--border-light);
+    padding: 8px 6px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: var(--orange-bg);
+  }
+  table.rules th {
+    background: var(--orange-deep);
+    color: #fff;
+    font-weight: 700;
+  }
+  .rules-side {
+    background: var(--orange-deep);
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+    width: 72px;
+  }
+  .rules-band {
+    background: var(--orange-mid);
+    color: var(--text-dark);
+    font-weight: 700;
+    text-align: center;
+    padding: 6px 4px;
+  }
+  .basic { color: var(--text-dark); }
+  .dictionary-form { background-color: var(--orange-light); }
+  .red {
+    color: #c44a1f;
+    font-weight: 900;
+  }
+  .vertical-arrow {
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+  .padded-cell { padding-top: 22px; padding-bottom: 22px; }
+  .special-list {
+    text-align: left !important;
+    padding: 8px 14px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  /* 图 2（框架版）专用：隐藏文字 */
+  .text-transparent { color: transparent; }
+</style>
+</head>
+<body>
+  <header class="page-header">
+    <img src="public/logo.svg" alt="圆圆的日语教室 Logo" class="logo" />
+    <div>
+      <p class="title">日语动词活用表</p>
+      <p class="subtitle">图 1：一类（五段）动词活用形 · 图 2：活用规则框架 · 图 3：活用规则（带词尾变化）</p>
+    </div>
+  </header>
+
+  <!-- =================== 图 1：五段动词活用形 =================== -->
+  <section class="table-card">
+    <h3 class="section-title-wrap">
+      <span class="section-title">图 1 · 一类（五段）动词活用形</span>
+      <button class="shot-btn" type="button" data-shot="1" title="下载图 1 为图片" aria-label="下载图 1 为图片">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+          <circle cx="12" cy="13" r="4"></circle>
+        </svg>
+      </button>
+    </h3>
+    <table class="verb">
+      <colgroup>
+        <col style="width:78px"><!-- 行标签 -->
+        <col style="width:80px"><!-- 買う -->
+        <col style="width:80px"><!-- 立つ -->
+        <col style="width:80px"><!-- やる -->
+        <col style="width:80px"><!-- 死ぬ -->
+        <col style="width:80px"><!-- 飛ぶ -->
+        <col style="width:80px"><!-- 読む -->
+        <col style="width:80px"><!-- 書く -->
+        <col style="width:80px"><!-- 泳ぐ -->
+        <col style="width:80px"><!-- 貸す -->
+        <col style="width:50px"><!-- 词尾变化 -->
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th>
+          <th>買う</th>
+          <th>立つ</th>
+          <th>やる</th>
+          <th>死ぬ</th>
+          <th>飛ぶ</th>
+          <th>読む</th>
+          <th>書く</th>
+          <th>泳ぐ</th>
+          <th>貸す</th>
+          <th>词尾<br>变化</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="verb-cell">词干</td>
+          <td class="verb-cell">kaw-</td>
+          <td class="verb-cell">tat-</td>
+          <td class="verb-cell">yar-</td>
+          <td class="verb-cell">sin-</td>
+          <td class="verb-cell">tob-</td>
+          <td class="verb-cell">yom-</td>
+          <td class="verb-cell">kak-</td>
+          <td class="verb-cell">oyog-</td>
+          <td class="verb-cell">kas-</td>
+          <td rowspan="2" class="empty-cell"></td>
+        </tr>
+        <tr>
+          <td>辞书形</td>
+          <td>買う</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr class="section-bg">
+          <td>ない形</td>
+          <td>買わない</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td rowspan="4" class="rules-band">词尾<br/> <span class="vertical-arrow"> → </span><br/> <span>あ段</span><br/><span style="font-size: 8px;">（う→わ）</span></td>
+        </tr>
+        <tr class="section-bg">
+          <td>使役</td>
+          <td>買わせる</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr class="section-bg">
+          <td>受身</td>
+          <td>買われる</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr class="section-bg">
+          <td>使役<br>受身</td>
+          <td>買わされる</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>ます形</td>
+          <td>買います</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td class="rules-band">词尾<br/> <span class="vertical-arrow"> → </span><br/> <span>い段</span></td>
+        </tr>
+        <tr class="section-bg">
+          <td>命令形</td>
+          <td>買え</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td rowspan="3" class="rules-band">词尾<br/> <span class="vertical-arrow"> → </span><br/> <span>え段</span></td>
+        </tr>
+        <tr class="section-bg">
+          <td>ば形</td>
+          <td>買えば</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr class="section-bg">
+          <td>可能形</td>
+          <td>買える</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>意志形</td>
+          <td>買おう</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td class="rules-band">词尾<br/> <span class="vertical-arrow"> → </span><br/> <span>お段</span></td>
+        </tr>
+        <tr>
+          <td>て形/<br>た形</td>
+          <td>買って/た</td>
+          <td>立って/た</td>
+          <td>取って/た</td>
+          <td>死んで/だ</td>
+          <td>飛んで/だ</td>
+          <td>読んで/だ</td>
+          <td>書いて/た</td>
+          <td>泳いで/だ</td>
+          <td>貸して/た</td>
+          <td rowspan="2">特殊<br>音变</td>
+        </tr>
+        <tr>
+          <td>音便形</td>
+          <td colspan="3" class="label-green">促音便</td>
+          <td colspan="3" class="label-red">撥音便</td>
+          <td colspan="2" class="label-blue">イ音便</td>
+          <td>なし</td>
+        </tr>
+        <tr>
+          <td>その他<br>の例</td>
+          <td><div class="other-list">思う<br>習う<br>食う<br>笑う</div></td>
+          <td><div class="other-list">打つ<br>勝つ<br>待つ<br>持つ</div></td>
+          <td><div class="other-list">取る<br>切る<br>走る<br>売る</div></td>
+          <td rowspan="2" class="empty">
+            <div class="other-list none-text" style="text-align:center;">なし</div>
+          </td>
+          <td><div class="other-list">遊ぶ<br>学ぶ<br>喜ぶ<br>呼ぶ</div></td>
+          <td><div class="other-list">飲む<br>休む<br>住む<br>包む</div></td>
+          <td><div class="other-list">聞く<br>歩く<br>引く<br>働く</div></td>
+          <td><div class="other-list">騒ぐ<br>急ぐ<br>脱ぐ<br>漕ぐ</div></td>
+          <td><div class="other-list">押す<br>消す<br>干す<br>出す</div></td>
+          <td class="empty-cell"></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- =================== 图 2：活用规则（框架） =================== -->
+  <section class="table-card">
+    <h3 class="section-title-wrap">
+      <span class="section-title">图 2 · 日语动词的活规则（框架）</span>
+      <button class="shot-btn" type="button" data-shot="2" title="下载图 2 为图片" aria-label="下载图 2 为图片">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+          <circle cx="12" cy="13" r="4"></circle>
+        </svg>
+      </button>
+    </h3>
+    <table class="rules">
+      <colgroup>
+        <col style="width:90px">
+        <col style="width:60px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:88px">
+        <col style="width:80px">
+        <col style="width:60px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:80px">
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan="2"></th>
+          <th>基本形</th>
+          <th>て/た形</th>
+          <th>ない形</th>
+          <th>使役</th>
+          <th>被动</th>
+          <th>使役被动</th>
+          <th>ます形</th>
+          <th>命令形</th>
+          <th>ば形</th>
+          <th>可能形</th>
+          <th>意向形</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="rules-side" colspan="2">语法<br>功能</th>
+          <td class="basic text-transparent">普通体终止形/<br>连体修饰</td>
+          <td class="basic text-transparent">接续/过去·完了</td>
+          <td class="basic text-transparent">否定</td>
+          <td class="basic text-transparent">使役</td>
+          <td class="basic text-transparent">被动/<br>尊敬</td>
+          <td class="basic text-transparent">使役被动</td>
+          <td class="basic text-transparent">礼貌体终止形</td>
+          <td class="basic text-transparent">命令</td>
+          <td class="basic text-transparent">假定</td>
+          <td class="basic text-transparent">可能</td>
+          <td class="basic text-transparent">意志</td>
+        </tr>
+        <tr>
+          <th class="rules-side" rowspan="5" colspan="2">一类<br>（五段）</th>
+          <td rowspan="2" class="basic dictionary-form padded-cell">う、つ、る</td>
+          <td rowspan="2" class="basic text-transparent padded-cell">って/た</td>
+          <td colspan="4" class="rules-band">词尾→<span class="red text-transparent">あ</span>段<span class="red text-transparent">（う→わ）</span></td>
+          <td class="rules-band">词尾→<span class="red text-transparent">い</span>段</td>
+          <td colspan="3" class="rules-band">词尾→<span class="red text-transparent">え</span>段</td>
+          <td class="rules-band">词尾→<span class="red text-transparent">お</span>段</td>
+        </tr>
+        <tr>
+          <td rowspan="4" class="basic text-transparent">+ない</td>
+          <td rowspan="4" class="basic text-transparent">+せる</td>
+          <td rowspan="4" class="basic text-transparent">+れる</td>
+          <td rowspan="3" class="basic text-transparent">+される</td>
+          <td rowspan="4" class="basic text-transparent">+ます</td>
+          <td rowspan="4" class="empty-cell"></td>
+          <td rowspan="4" class="basic text-transparent">+ば</td>
+          <td rowspan="4" class="basic text-transparent">+る</td>
+          <td rowspan="4" class="basic text-transparent">+う</td>
+        </tr>
+        <tr>
+          <td class="basic dictionary-form">ぬ、む、ぶ</td>
+          <td class="basic text-transparent">んで/だ</td>
+        </tr>
+        <tr>
+          <td class="basic dictionary-form">く、ぐ</td>
+          <td class="basic text-transparent">いて/た<br>いで/だ</td>
+        </tr>
+        <tr>
+          <td class="basic dictionary-form">す</td>
+          <td class="basic text-transparent">して/た</td>
+          <td class="basic text-transparent">+せられる</td>
+        </tr>
+        <tr>
+          <th class="rules-side" colspan="2" rowspan="2">二类<br>（一段）</th>
+          <td rowspan="2" class="basic dictionary-form">見る</td>
+          <td colspan="10" class="rules-band">（去词尾る）</td>
+        </tr>
+        <tr>
+          <td class="basic text-transparent">+て/た</td>
+          <td class="basic text-transparent">+ない</td>
+          <td class="basic text-transparent">+させる</td>
+          <td class="basic text-transparent">+られる</td>
+          <td class="basic text-transparent">+させられる</td>
+          <td class="basic text-transparent">+ます</td>
+          <td class="basic text-transparent">+ろ</td>
+          <td class="basic text-transparent">+れば</td>
+          <td class="basic text-transparent">+られる</td>
+          <td class="basic text-transparent">+よう</td>
+        </tr>
+        <tr>
+          <th class="rules-side" rowspan="2">三类</th>
+          <th>サ変</th>
+          <td class="basic dictionary-form">する</td>
+          <td class="basic text-transparent">して/た</td>
+          <td class="basic text-transparent">しない</td>
+          <td class="basic text-transparent">させる</td>
+          <td class="basic text-transparent">される</td>
+          <td class="basic text-transparent">させられる</td>
+          <td class="basic text-transparent">します</td>
+          <td class="basic text-transparent">しろ</td>
+          <td class="basic text-transparent">すれば</td>
+          <td class="basic text-transparent">できる</td>
+          <td class="basic text-transparent">しよう</td>
+        </tr>
+        <tr>
+          <th>カ変</th>
+          <td class="basic dictionary-form">来る</td>
+          <td class="basic text-transparent">きて/た</td>
+          <td class="basic text-transparent">こない</td>
+          <td class="basic text-transparent">こさせる</td>
+          <td class="basic text-transparent">こられる</td>
+          <td class="basic text-transparent">こさせられる</td>
+          <td class="basic text-transparent">きます</td>
+          <td class="basic text-transparent">こい</td>
+          <td class="basic text-transparent">くれば</td>
+          <td class="basic text-transparent">こられる</td>
+          <td class="basic text-transparent">こよう</td>
+        </tr>
+        <tr>
+          <th class="rules-side" colspan="2">特殊<br>变化</th>
+          <td colspan="11" class="empty-cell special-list">
+            行く：<span class="text-transparent">行って/た</span><br>
+            ある：<span class="text-transparent">否定形 → ない （形容词）</span><br>
+            要る：<span class="text-transparent">没有过去式（方言除外）</span><br>
+            問う、乞う：<span class="text-transparent">問うて/た、乞うて/た</span><br>
+            負う、雇う、沿う：<span class="text-transparent">負うて/た、雇って/た</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- =================== 图 3：活用规则（带词尾变化） =================== -->
+  <section class="table-card">
+    <h3 class="section-title-wrap">
+      <span class="section-title">图 3 · 日语动词的活规则（带词尾变化）</span>
+      <button class="shot-btn" type="button" data-shot="3" title="下载图 3 为图片" aria-label="下载图 3 为图片">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+          <circle cx="12" cy="13" r="4"></circle>
+        </svg>
+      </button>
+    </h3>
+    <table class="rules">
+      <colgroup>
+        <col style="width:90px">
+        <col style="width:60px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:88px">
+        <col style="width:80px">
+        <col style="width:60px">
+        <col style="width:80px">
+        <col style="width:80px">
+        <col style="width:80px">
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan="2"></th>
+          <th>基本形</th>
+          <th>て/た形</th>
+          <th>ない形</th>
+          <th>使役</th>
+          <th>被动</th>
+          <th>使役被动</th>
+          <th>ます形</th>
+          <th>命令形</th>
+          <th>ば形</th>
+          <th>可能形</th>
+          <th>意向形</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="rules-side" colspan="2">语法<br>功能</th>
+          <td class="basic">普通体终止形/<br>连体修饰</td>
+          <td class="basic">接续/过去·完了</td>
+          <td class="basic">否定</td>
+          <td class="basic">使役</td>
+          <td class="basic">被动/<br>尊敬</td>
+          <td class="basic">使役被动</td>
+          <td class="basic">礼貌体终止形</td>
+          <td class="basic">命令</td>
+          <td class="basic">假定</td>
+          <td class="basic">可能</td>
+          <td class="basic">意志</td>
+        </tr>
+        <tr>
+          <th class="rules-side" rowspan="5" colspan="2">一类<br>（五段）</th>
+          <td rowspan="2" class="basic dictionary-form padded-cell">う、つ、る</td>
+          <td rowspan="2" class="basic padded-cell">って/た</td>
+          <td colspan="4" class="rules-band">词尾→<span class="red">あ</span>段<span class="red">（う→わ）</span></td>
+          <td class="rules-band">词尾→<span class="red">い</span>段</td>
+          <td colspan="3" class="rules-band">词尾→<span class="red">え</span>段</td>
+          <td class="rules-band">词尾→<span class="red">お</span>段</td>
+        </tr>
+        <tr>
+          <td rowspan="4" class="basic">+ない</td>
+          <td rowspan="4" class="basic">+せる</td>
+          <td rowspan="4" class="basic">+れる</td>
+          <td rowspan="3" class="basic">+される</td>
+          <td rowspan="4" class="basic">+ます</td>
+          <td rowspan="4" class="empty-cell"></td>
+          <td rowspan="4" class="basic">+ば</td>
+          <td rowspan="4" class="basic">+る</td>
+          <td rowspan="4" class="basic">+う</td>
+        </tr>
+        <tr>
+          <td class="basic dictionary-form">ぬ、む、ぶ</td>
+          <td class="basic">んで/だ</td>
+        </tr>
+        <tr>
+          <td class="basic dictionary-form">く、ぐ</td>
+          <td class="basic">いて/た<br>いで/だ</td>
+        </tr>
+        <tr>
+          <td class="basic dictionary-form">す</td>
+          <td class="basic">して/た</td>
+          <td class="basic">+せられる</td>
+        </tr>
+        <tr>
+          <th class="rules-side" colspan="2" rowspan="2">二类<br>（一段）</th>
+          <td rowspan="2" class="basic dictionary-form">見る</td>
+          <td colspan="10" class="rules-band">（去词尾る）</td>
+        </tr>
+        <tr>
+          <td class="basic">+て/た</td>
+          <td class="basic">+ない</td>
+          <td class="basic">+させる</td>
+          <td class="basic">+られる</td>
+          <td class="basic">+させられる</td>
+          <td class="basic">+ます</td>
+          <td class="basic">+ろ</td>
+          <td class="basic">+れば</td>
+          <td class="basic">+られる</td>
+          <td class="basic">+よう</td>
+        </tr>
+        <tr>
+          <th class="rules-side" rowspan="2">三类</th>
+          <th>サ変</th>
+          <td class="basic dictionary-form">する</td>
+          <td class="basic">して/た</td>
+          <td class="basic">しない</td>
+          <td class="basic">させる</td>
+          <td class="basic">される</td>
+          <td class="basic">させられる</td>
+          <td class="basic">します</td>
+          <td class="basic">しろ</td>
+          <td class="basic">すれば</td>
+          <td class="basic">できる</td>
+          <td class="basic">しよう</td>
+        </tr>
+        <tr>
+          <th>カ変</th>
+          <td class="basic dictionary-form">来る</td>
+          <td class="basic">きて/た</td>
+          <td class="basic">こない</td>
+          <td class="basic">こさせる</td>
+          <td class="basic">こられる</td>
+          <td class="basic">こさせられる</td>
+          <td class="basic">きます</td>
+          <td class="basic">こい</td>
+          <td class="basic">くれば</td>
+          <td class="basic">こられる</td>
+          <td class="basic">こよう</td>
+        </tr>
+        <tr>
+          <th class="rules-side" colspan="2">特殊<br>变化</th>
+          <td colspan="11" class="empty-cell special-list">
+            行く：行って/た<br>
+            ある：否定形 → ない （形容词）<br>
+            要る：没有过去式（方言除外）<br>
+            問う、乞う：問うて/た、乞うて/た<br>
+            負う、雇う、沿う：負うて/た、雇って/た
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <p class="subtitle" style="text-align:center;max-width:920px;">
+    说明：图 1 展示了 9 个五段动词在 12 种活用形下的变化，以及它们对应的音便类型（促音便 / 撥音便 / イ音便）。
+    图 2 与图 3 为同一张表的两个版本：图 2 只显示框架与分组，图 3 填入了具体的词尾变化与助动词。
+  </p>
+
+  <footer class="copyright">
+    © 圆圆的日语教室 · <a href="https://space.bilibili.com/453272233" target="_blank" rel="noopener noreferrer">https://space.bilibili.com/453272233</a>
+  </footer>
+
+  <script src="public/snapdom-v2.18.0.js"></script>
+  <script>
+    (function () {
+      if (!window.snapdom) { console.warn('snapDOM 未加载'); return; }
+
+      // 找到每个 .table-card 内的「标题 + 表格」容器，截图整个区域
+      const sections = document.querySelectorAll('section.table-card');
+      const fileNames = [
+        'japanese-verb-conjugation-figure-1.png',
+        'japanese-verb-conjugation-figure-2.png',
+        'japanese-verb-conjugation-figure-3.png'
+      ];
+
+      function triggerDownload(blob, filename) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }
+
+      async function snap(section, filename, btn) {
+        if (!section || !window.snapdom) return;
+        const original = btn.disabled;
+        btn.disabled = true;
+        const prevText = btn.getAttribute('aria-label');
+        btn.setAttribute('aria-label', '正在生成图片…');
+        try {
+          // 把整个 table-card（包含标题与按钮）渲染为 PNG
+          const result = await window.snapdom.toPng(section, { scale: 2 });
+          const blob = await (result instanceof Blob
+            ? Promise.resolve(result)
+            : (await fetch(result)).blob());
+          triggerDownload(blob, filename);
+        } catch (err) {
+          console.error('截图失败：', err);
+          alert('截图失败，请重试。详见控制台。');
+        } finally {
+          btn.disabled = original;
+          btn.setAttribute('aria-label', prevText || '下载为图片');
+        }
+      }
+
+      document.querySelectorAll('.shot-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.dataset.shot, 10) - 1;
+          const section = sections[idx];
+          const filename = fileNames[idx] || `figure-${idx + 1}.png`;
+          snap(section, filename, btn);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
