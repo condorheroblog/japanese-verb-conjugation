@@ -101,7 +101,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-end;
   }
   .page-header .github-link {
@@ -125,6 +125,37 @@
     border-color: var(--orange-deep);
   }
   .page-header .github-link svg { width: 18px; height: 18px; }
+  /* === 移动端适配 === */
+  @media (max-width: 640px) {
+    body { padding: 16px 10px 40px; gap: 20px; }
+    .page-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .page-header .logo { width: 52px; height: 52px; }
+    .page-header .header-actions {
+      width: 100%;
+      margin-left: 0;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+    .page-header .title { font-size: 20px; }
+    .page-header .subtitle { font-size: 12px; }
+    .page-header .github-link,
+    .page-header .nav-link {
+      font-size: 13px;
+      padding: 5px 10px;
+    }
+    .page-header .github-link svg { width: 16px; height: 16px; }
+    .shot-btn { width: 28px; height: 28px; }
+    .shot-btn svg { width: 14px; height: 14px; }
+    .table-card { padding: 12px; border-radius: 12px; }
+    table.verb { font-size: 12px; }
+    table.verb th, table.verb td { padding: 4px 3px; }
+    table.rules { font-size: 12px; }
+    table.rules th, table.rules td { padding: 6px 4px; }
+  }
   .page-header .nav-link {
     display: inline-flex;
     align-items: center;
